@@ -43,14 +43,10 @@
           </div>
           <div class="nav-item">Login</div>
         </div>
-<<<<<<< HEAD
-    </div>    
-=======
       </div>
       
       
       
->>>>>>> 0221c613fc2d4e44981cf7332b8a56e7ae954df2
     <div class="container event">
       <div class="row">
         <div class="col-md-7 col-sm-12">
@@ -59,34 +55,34 @@
         </div>
         <div class="col-md-5 col-sm-12">
           <div class="event-details">
-            <form class="needs-validation event-form" novalidate>
+            <form class="needs-validation event-form" method="POST" action="/eventroute" >
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control mx-auto" id="event-name" placeholder="Event Name" required="true">
+                    <input type="text" class="form-control mx-auto" id="event-name" placeholder="eventname" name="eventname" required="true">
                     <div class="valid-feedback">
                         Looks Good!
                     </div>
                 </div>
                 <div class="form-group mb-4">
-                    <input type="number" class="form-control mx-auto" id="event-price" placeholder="Registration Fee (in Rupees)" required="true" min = "0" step="10">
+                    <input type="number" class="form-control mx-auto" id="eventprice" name="fees" placeholder="Registration Fee (in Rupees)" required="true" min = "0" step="10">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control mx-auto" name="event-venue" placeholder="Event Venue" required="true">
+                    <input type="text" class="form-control mx-auto" name="eventvenue" placeholder="Event Venue" required="true">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="date" class="form-control mx-auto" name="event-date" id="event-date" placeholder="Date" required=true>
+                    <input type="date" class="form-control mx-auto" name="eventdate" id="event-date" placeholder="Date" required=true>
                 </div>
                 <div class="form-group mb-4">
-                    <input type="time" class="form-control mx-auto" name="event-time" id="event-time" placeholder="Time" required=true>
+                    <input type="time" class="form-control mx-auto" name="eventtime" id="event-time" placeholder="Time" required=true>
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control mx-auto" name="event-link" placeholder="Registration Link" required="true">
+                    <input type="text" class="form-control mx-auto" name="eventlink" placeholder="Registration Link" required="true">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control mx-auto" name="event-img" placeholder="Image URL" required="true">
+                    <input type="text" class="form-control mx-auto" name="eventimg" placeholder="Image URL" required="true">
                 </div>
-                <textarea name="event-description" placeholder="Event Description" class="event-description"></textarea><br>
+                <textarea name="eventdescription" placeholder="Event Description" class="event-description"></textarea><br>
                 <div style="text-align: center;">
-                    <a class="btn btn-submit">Submit</a>
+                    <a class="btn btn-submit" type="Submit">Submit</a>
                 </div>
             </form>
           </div>

@@ -154,11 +154,9 @@ z-index: -1;
   background-color: #ff7070;
   border-radius: 10px; 
 }
-<<<<<<< HEAD
 .navigation__button {
   height: 7rem;
   width: 7rem;
-=======
 /* NAVBAR */ 
 .main-navbar{
   position: fixed;
@@ -251,18 +249,14 @@ z-index: -1;
   height: 7rem;
   width: 7rem;
   top: 6rem;
->>>>>>> 0221c613fc2d4e44981cf7332b8a56e7ae954df2
   right: 125rem;
   z-index: 2000 ;
   text-align: center;
   cursor: pointer; 
-<<<<<<< HEAD
   top: -22px;
   left: 20px;
-=======
   top: 0;
   left: 0;
->>>>>>> 0221c613fc2d4e44981cf7332b8a56e7ae954df2
   position: absolute;   
   margin-left: 1%;
 }
@@ -326,13 +320,10 @@ position: relative;
 margin-top: 3.5rem; 
 }
 .navigation__icon, .navigation__icon::before, .navigation__icon::after {
-<<<<<<< HEAD
 width: 2rem;
 height: 1.5px;
-=======
 width: 3rem;
 height: 2px;
->>>>>>> 0221c613fc2d4e44981cf7332b8a56e7ae954df2
 background-color: #FF7070;
 display: inline-block;
 transition: all .2s; 
@@ -343,7 +334,6 @@ position: absolute;
 left: 0; 
 }
 .navigation__icon::before {
-<<<<<<< HEAD
 top: -0.6rem; 
 }
 .navigation__icon::after {
@@ -354,7 +344,6 @@ top: -0.8rem;
 }
 .navigation__button:hover .navigation__icon::after {
 top: 0.8rem; 
-=======
 top: -0.8rem; 
 }
 .navigation__icon::after {
@@ -365,7 +354,6 @@ top: -1rem;
 }
 .navigation__button:hover .navigation__icon::after {
 top: 1rem; 
->>>>>>> 0221c613fc2d4e44981cf7332b8a56e7ae954df2
 }
 .navigation__button.open .navigation__icon {
   transform: translateX(-50px);
