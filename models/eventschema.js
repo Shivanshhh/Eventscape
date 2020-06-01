@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 
 const eventSchema= new mongoose.Schema({
     eventname:{
@@ -42,4 +43,5 @@ eventdescription: {
 }
 });
 
-const Event=mongoose.model('Event', eventSchema);
+
+module.exports = mongoose.model('Event', eventSchema);
