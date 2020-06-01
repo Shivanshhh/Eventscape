@@ -1,12 +1,3 @@
-const mongoose = require('mongoose');
-
-mongoose.connect( , (err) => {
-    if (err) {
-        console.log(`Error: ${err}`);
-    } else {
-        console.log('Mongo Connection Success');
-    }
-});
 
 const eventSchema= new mongoose.Schema({
     eventname:{
@@ -24,29 +15,31 @@ eventvenue:{
     required: [true],
     trim: true,
 },
-date:{
+eventdate:{
     type: Date,
     required: [true],
     trim: true,
 },
-time:{
+eventtime:{
     type: String,
     required: [true],
     trim: true,
 },
-link:{
+eventlink:{
     type: String,
     required: [true],
     trim: true,
 },
-image:{
+eventimg:{
     type: String,
     required:[true],
     trim: true,
 },
-description: {
+eventdescription: {
     type: String,
     required: [true],
     trim: true
 }
 });
+
+const Event=mongoose.model('Event', eventSchema);
