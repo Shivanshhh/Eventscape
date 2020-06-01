@@ -25,7 +25,10 @@ $(".event-item").on('click', function(){
 $(".faq-q-tab").on('click',function(){
 	$(this).children('.faq-a-tab').slideToggle();
 	$('.fa-angle-up',this).toggleClass('hide');
-	$('.fa-angle-down',this).toggleClass('hide');
+    $('.fa-angle-down',this).toggleClass('hide');
+    $("nav").toggleClass("navigation__nav--active");
+    $(".navigation__background").toggleClass("navigation__background--active");
+    $(".navigation__icon").toggleClass("navigation__icon--active");
 });
 
 $(".navigation__button").on('click',function(){
