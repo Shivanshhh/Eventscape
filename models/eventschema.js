@@ -16,8 +16,9 @@ eventvenue:{
     required: [true],
     trim: true,
 },
+//remember format
 eventdate:{
-    type: Date,
+    type: String,
     required: [true],
     trim: true,
 },
