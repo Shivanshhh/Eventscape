@@ -4,9 +4,10 @@ const path = require('path');
 const dotenv = require('dotenv');
 //const mainRouter = require('./routes/index');
 const eventrouter = require('./routes/eventroute')
-
+const currenteventrouter= require('./routes/event')
 const app = express();
-
+const mongoose = require('mongoose');
+// require('./models/db');
 dotenv.config();
 
 app.use(bodyParser.urlencoded({ extended: true }));

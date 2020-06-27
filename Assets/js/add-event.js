@@ -6,6 +6,7 @@ $(".navigation__button").on('click',function(){
     // document.styleSheets[0].addRule(".navigation__icon::before", "top: 0 !important; transform: rotate(135deg);", 4);
     // document.styleSheets[0].addRule(".navigation__icon::after", "top: 0 !important; transform: rotate(-135deg);", 4);  
 });
+
 console.log("itsssssssssss working")
 
 //-------------Hamburger Toggle----------------//
