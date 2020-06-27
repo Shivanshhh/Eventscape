@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="en">
+    <title>EventScape</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- CSS Link-->
+    <link rel="stylesheet" href="/css/add-event.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar here -->
+    <div class="main-navbar">
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+      
+        <div class="navigation__background">&nbsp;</div>
+    
+        <nav class="navigation__nav ">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span> Events</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span> FAQ</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span> Add Event</a></li>
+            </ul>
+        </nav>
+        <div class="navbar-right">
+          <div class="nav-item">
+            <div class="search-bar">
+              <input type="text" placeholder="Search for an Event" required></input>
+              <div class="search-icon"></div>
+            </div>
+          </div>
+          <div class="nav-item">Login</div>
+        </div>
+      </div>
+      
+      
+      
+    <div class="container event">
+      <div class="row">
+        <div class="col-md-7 col-sm-12">
+          <h2>Add Event</h2>
+          <img class="illustration" src="" alt="">
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <div class="event-details">
+            <form class="needs-validation event-form" method="POST" action="/" >
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control mx-auto" id="event-name" placeholder="eventname" name="eventname" required="true">
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <input type="number" class="form-control mx-auto" id="eventprice" name="fees" placeholder="Registration Fee (in Rupees)" required="true" min = "0" step="10">
+                </div>
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control mx-auto" name="eventvenue" placeholder="Event Venue" required="true">
+                </div>
+                <div class="form-group mb-4">
+                    <input type="date" class="form-control mx-auto" name="eventdate" id="event-date" placeholder="Date" required=true>
+                </div>
+                <div class="form-group mb-4">
+                    <input type="time" class="form-control mx-auto" name="eventtime" id="event-time" placeholder="Time" required=true>
+                </div>
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control mx-auto" name="eventlink" placeholder="Registration Link" required="true">
+                </div>
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control mx-auto" name="eventimg" placeholder="Image URL" required="true">
+                </div>
+                <textarea name="eventdescription" placeholder="Event Description" class="event-description"></textarea><br>
+                <div style="text-align: center;">
+                    <a class="btn btn-submit" type="Submit">Submit</a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JS Link-->
+    <script src="/js/add-event.js"></script>
+</body>
+</html>
