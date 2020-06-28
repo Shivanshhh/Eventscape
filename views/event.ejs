@@ -8,7 +8,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- CSS Link-->
-    <link rel="stylesheet" href="./Assets/css/event.css">
+    <link rel="stylesheet" href="/css/event.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body> 
     <!-- Navbar here -->
     <div class="main-navbar">
         <label for="navi-toggle" class="navigation__button">
@@ -31,7 +31,7 @@
             <ul class="navigation__list">
                 <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span> Events</a></li>
                 <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span> FAQ</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span> Add Event</a></li>
+                <li class="navigation__item"><a href="localhost:3000/addevent" class="navigation__link"><span>03</span> Add Event</a></li>
             </ul>
         </nav>
         <div class="navbar-right">
@@ -47,20 +47,20 @@
     <div class="container event">
       <div class="row">
         <div class="col-md-7 col-sm-12">
-          <h2>Event Name</h2>
-          <img class="illustration" src="" alt="">
+           <h2><%=record.eventname%></h2>
+          <img class="illustration" src="<%=record.eventimg%>" alt="">
         </div>
         <div class="col-md-5 col-sm-12">
             <div class="event-details">
-                <div class="event-date"><i class="icon">-i-</i>&nbsp;&nbsp; 12th March 2020</div>
-                <div class="event-venue"><i class="icon">-i-</i>&nbsp;&nbsp; Kamraj Auditorium</div>
-                <div class="event-price"><i class="icon">-i-</i>&nbsp;&nbsp; 450</div>
+                <div class="event-date"><i class="icon">-i-</i>&nbsp;&nbsp; <%=record.eventdate%></div>
+                <div class="event-venue"><i class="icon">-i-</i>&nbsp;&nbsp; <%=record.eventvenue%></div>
+                <div class="event-price"><i class="icon">-i-</i>&nbsp;&nbsp; <%=record.fees%></div>
                 <div class="event-description">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero nisi accusamus debitis quas dolore nihil, blanditiis, in, consectetur voluptatem veritatis veniam quaerat expedita ut? Culpa officia magni, laborum placeat delectus praesentium omnis nesciunt in autem distinctio voluptatibus ducimus cum, id possimus? Odit sit, temporibus magni nisi blanditiis quisquam expedita!</p>
+                  <p><%=record.eventdescription%></p>
                 </div>
                 <div class="event-response">
                   <button class="btn-event-item"><span>Add to Calender</span></button>
-                  <button class="btn-event-item"><span>Register</span></button>
+                  <button href="<%=record.eventlink%>" class="btn-event-item"><span>Register</span></button>
                 </div>
             </div>
         </div>
@@ -74,6 +74,6 @@
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- JS Link-->
-    <script src="./Assets/js/event.js"></script>
+    <script src="/js/event.js"></script>
 </body>
 </html>
