@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     
     <!-- CSS Link-->
-    <link href=".\Assets\css\main" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../Assets/css/main.css">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
 
     <nav class="navigation__nav ">
         <ul class="navigation__list">
-            <li class="navigation__item"><a href="#events" class="navigation__link"><span>01</span> Events</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span> Events</a></li>
             <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span> FAQ</a></li>
             <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span> Add Event</a></li>
         </ul>
@@ -95,7 +95,7 @@
   </div>
 
   
-  <div id="events" class="container events">
+  <div class="container events">
       <div class="events-header" data-aos="fade-up" data-aos-duration="1800">
         <h2 class="ui center aligned icon header events-heading">
           <i class="circular calendar alternate outline icon events-icon"></i>
@@ -181,7 +181,7 @@
               <div class="card__side card__side--back">
                 <div class="card-details">
                   <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
-                  <a href=<%`localhost:3000/event/${record._id}`%>  class="btn card-btn btn-more"><span>Know more</span></a>
+                  <a href="#" class="btn card-btn btn-more"><span>Know more</span></a>
                   <a href="#" class="btn card-btn btn-register"><span>Register</span></a>
                 </div>
               </div>
@@ -206,8 +206,8 @@
           <div class="col-md-6 col-sm-12 col-lg-4">
             <div class="card card__main">
               <div class="card__side card__side--front">
-                <div class="card__picture">
-                  
+                <div >
+                  <img src= "Assets/imgs/cover1" class="card picture">
                 </div>
               </div>
               <div class="card__side card__side--back">
@@ -281,6 +281,11 @@
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- JS Link-->
-  <script src="./Assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
+
+
+
+
 </body>
 </html>
+
