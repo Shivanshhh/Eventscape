@@ -9,7 +9,6 @@ const eventSchema= new mongoose.Schema({
 fees:{
     type: Number,
     trim: true,
-
 },
 eventvenue:{
     type: String,
@@ -45,6 +44,4 @@ eventdescription: {
 });
 
 const Event=mongoose.model('Event', eventSchema);
-
-
 module.exports= Event;
