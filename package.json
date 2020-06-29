@@ -27,6 +27,5 @@
     "mongoose": "^5.9.20",
     "nodemon": "^2.0.4",
     "path": "^0.12.7"
-  },
-  "devDependencies": {}
+  }
 }

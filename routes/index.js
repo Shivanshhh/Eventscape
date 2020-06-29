@@ -1,32 +1,33 @@
 const express = require('express');
 const Event = require('../models/eventschema');
 const router = express.Router();
-
+var event_date = [];
 router.get('/home', (req,res) =>
 {
-  var event_dates = [];
-  event_dates = Event.find({}, {eventdate:1, _id:0});
+//   Event.find().each(function(err, doc) {
+//     event_date.push(doc.eventdate);
+//   });
 
-  function sortDates(dates) {
-    return dates.map(function(date) {
-      return new Date(date).getTime();
-    }).sort((a, b)=> {
-      return a - b;
-    });
-  }
+//   function sortDates(dates) {
+//     return dates.map(function(date) {
+//       return new Date(date).getTime();
+//     }).sort(function(a, b) {
+//       return a - b;
+//     });
+//   }
 
-  event_dates = sortDates(event_dates);
-  var nextDates = event_dates.filter(function(date) {
-    return (Date.now() - date) < 0;
-  }); 
-  const images = [];
-for(i=0;i<7;i++)
-{
-  images[i] = nextDates[i];
-}
-res.render("main.ejs", image1= images[0], image2 = images[1], image3 = images[2], image4 = images[3], image5 = image[4], image6 = image[5]);
+//   var orderedDates = sortDates(event_date);
+//   var nextDate = orderedDates.filter(function(date) {
+//     return (Date.now() - date) > 0;
+//   }); 
+//   var a= orderedDates.indexOf(nextDate)
 
+// for(i=0;i<7;i++)
+// {
+  
+// }
+
+res.render("main.ejs");
 
 });
-
 module.exports= router;
