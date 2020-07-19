@@ -8,7 +8,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- CSS Link-->
-    <link rel="stylesheet" href="/css/add-event.css">
+    <link rel="stylesheet" href="../assets/css/add-event.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -28,11 +28,11 @@
         <div class="navigation__background">&nbsp;</div>
     
         <nav class="navigation__nav ">
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span> Events</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span> FAQ</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span> Add Event</a></li>
-            </ul>
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="../index.html" class="navigation__link"><span><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link"><span><ion-icon name="help-circle-outline"></ion-icon></span>FAQ</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link"><span><ion-icon name="add"></ion-icon></span>Add Event</a></li>
+        </ul>
         </nav>
         <div class="navbar-right">
           <div class="nav-item">
@@ -41,51 +41,54 @@
               <div class="search-icon"></div>
             </div>
           </div>
-          <div class="nav-item">Login</div>
+          <div class="nav-item"><a href="./login.html">Login</a></div>        </div>
         </div>
-      </div>
-      
-      
-      
+    
     <div class="container event">
       <div class="row">
-        <div class="col-md-7 col-sm-12">
-          <h2>Add Event</h2>
-          <img class="illustration" src="" alt="">
+        <div class="col-md-7 col-sm-12 illustration">
+          <img src="../assets/imgs/i-1.svg" alt="" class="form-illustration">
         </div>
-        <div class="col-md-5 col-sm-12">
+        <div class="col-md-5 col-sm-12 form">
           <div class="event-details">
-            <form class="needs-validation event-form" method="POST" action="/addevent" >
-              <div class="form-group mb-4">  
-                  <input type="text" class="form-control mx-auto" id="event-name" placeholder="eventname" name="eventname" required="true">
+            <form class="needs-validation event-form" novalidate>
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control mx-auto" id="event-name" placeholder="Event Name" required="true" autocomplete="off">
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
                 </div>
                 <div class="form-group mb-4">
-                    <input type="number" class="form-control mx-auto" id="eventprice" name="fees" placeholder="Registration Fee (in Rupees)" required="true" min = "0" step="10">
+                    <input type="number" class="form-control mx-auto" id="event-price" placeholder="Registration Fee (in Rupees)" required="true" min = "0" step="10" autocomplete="off">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control mx-auto" name="eventvenue" placeholder="Event Venue" required="true">
+                    <input type="text" class="form-control mx-auto" name="event-venue" placeholder="Event Venue" required="true" autocomplete="off">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="date" class="form-control mx-auto" name="eventdate" id="event-date" placeholder="Date" required=true>
+                    <input type="date" class="form-control mx-auto" name="event-date" id="event-date" placeholder="Date" required="true">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="time" class="form-control mx-auto" name="eventtime" id="event-time" placeholder="Time" required=true>
+                    <input type="time" class="form-control mx-auto" name="event-time" id="event-time" placeholder="Time" required="true">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control mx-auto" name="eventlink" placeholder="Registration Link" required="true">
+                    <input type="text" class="form-control mx-auto" name="event-link" placeholder="Registration Link" required="true" autocomplete="off">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control mx-auto" name="eventimg" placeholder="Image URL" required="true">
+                  <input type="file" id="real-file" hidden="hidden" />
+                  <button type="button" id="custom-button">Upload an image</button>
+                  <span id="custom-text">No file chosen, yet.</span>
                 </div>
-                <textarea name="eventdescription" placeholder="Event Description" class="event-description"></textarea><br>
+                <textarea name="event-description" placeholder="Event Description" class="event-description"></textarea><br>
                 <div style="text-align: center;">
-                   <button class="btn btn-submit" type="submit">Submit</button>
+                    <a class="btn btn-submit">Submit</a>
                 </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+    <!-- ICONS -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -94,6 +97,6 @@
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- JS Link-->
-    <script src="/js/add-event.js"></script>
+    <script src="../Assets/js/main.js"></script>
 </body>
 </html>
