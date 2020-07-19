@@ -27,7 +27,7 @@ router.get('/home', (req,res) =>
   
 // }
 
-res.render("main.ejs");
+res.render("index.ejs");
 
 });
 module.exports= router;
