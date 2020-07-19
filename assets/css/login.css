@@ -1,3 +1,7 @@
+html,body{
+    height: 100%;
+}
+
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -5,104 +9,13 @@ html{
 }
 body{
     margin: 0 ;
+    
     padding: 0 ;
     font-family: 'Nunito', sans-serif;
-    background-color: #201F1F;
+    background-color: #201F1F ;
+    position: relative;
 }
-a{
-    text-decoration: none;
-    color: inherit;
-}
-a:hover{
-    text-decoration: none;
-    color: inherit;
-}
-.event{
-    margin-top: 6% !important;
-}
-.col-sm-12{
-    padding: 1.5rem;
-    text-align: center;
-}
-.event .row .col-md-7 h2 {
-    text-align: center;
-    margin-top: -0.5rem;
-    font-size: 4rem;
-    color: #FF7070;
-    font-weight: 700;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-.event-details{
-    margin: 0 auto;
-    text-align: left;
-    background-color: transparent;
-}
-.event-venue, .event-date, .event-price{
-    margin: 1.5rem 0rem;
-    display: flex;
-    white-space: nowrap;
-    color: #ffffffcc;
-    font-size: 2rem;
-    font-weight: 400;
-    opacity: 1;
-}
-.event-name{
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    color: #FF7070;
-}
-.event-response{
-    padding: 0;
-    display: flex;
-}
-.event-image{
-    height: 50vh;
-}
-.event-image  img{
-    width: 80%;
-    height: auto;
-    margin-top: 2rem;
-}
-.icon{
-    font-size: 2rem;
-    color: #FF7070;
-    opacity: 0.8;
-}
-.event-response{
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-evenly;
-}
-.btn-event-item{
-    border: none;
-    width: 40%;
-    margin-top: 2%;
-    padding: 1rem 1.5rem;
-    color: #fff !important;
-    background-color: #FF7070;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Nunito', sans-serif !important;
-    font-size: 1.5rem;
-}
-
-.col-md-7{
-    text-align: center;
-}
-.event-description{
-    color: gray;
-    font-size: 2rem;
-    text-align: justify;
-    background-color: transparent;
-}
-.event-type{
-    margin: 5% 0;
-    padding: 20px;
-    border: 2px solid gray;
-}
+/*------------------------- NAVBAR ----------------------------------*/
 .main-navbar{
     position: fixed;
     top: 0;
@@ -111,6 +24,11 @@ a:hover{
     height: 70px;
     background-color: #201F1F;
 }
+
+ion-icon{
+    margin-bottom: -.3rem;
+}
+
 .navbar-right{
     float: right;
     margin-top: 15px;
@@ -316,46 +234,75 @@ a:hover{
     border-radius: 10px; 
 }
 
-ion-icon{
-    margin-bottom: -.3rem;
+.btn-submit{
+    border: none;
+    /* width: 50%; */
+    margin-top: 2%;
+    padding: 1rem 1.5rem;
+    color: #fff !important;
+    background-color: #FF7070;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 1.5rem;
+    display: inline-block;
+    
 }
 
-@keyframes sheen {
-    100% {
-      transform: rotateZ(60deg) translate(1em, -9em);
-    }
-}
-@media(max-width: 1200px){
-    .nav-item{
-        text-align: center;
-    }
-    .search-box{
-        margin: 0 auto;
-    }
+/* LOGIN */
+
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    
 }
 
-@media only screen and (max-width: 62em){
-    .event-response{
-        flex-direction: column;
-    }
-    .event-response button{
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-    .event{
-        margin-top: 8% !important;
-    }
+.form-header{
+    margin-bottom: 2.5rem;
+    color: #ff7070;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-@media only screen and (max-width: 37.5em){
-    .event-details{
-        padding: 0 3rem;
-    }
+.form_group{
+    width: 100%;
+    /* padding: 0 18%; */
+    margin-bottom: 2.5rem;
+    text-align: center;
+    
 }
 
-@media only screen and (max-width: 48.125em){
-    .event-image{
-        margin-bottom: 30%;
-        margin-top: 10%;
-    }
+.form_input{ 
+    color: #fff !important;
+    background-color: transparent;
+    border: 1.5px solid #FF7070;
+    font-size: 1.5rem;
+    padding: 1.2rem;
+    border-radius: 1rem;   
+}
+
+.form_input:focus{
+    outline: none;
+    border-color: #3b3f3c ;
+}
+
+.form-direction{
+    margin-top: 4rem;
+    color: white
+    
+}
+.form-direction a{
+    color: #FF7070;
+    cursor: pointer;
+    
+}
+.form-direction a:hover{
+    color: #FF7070;  
+}
+
+.hide{
+    display: none;
 }

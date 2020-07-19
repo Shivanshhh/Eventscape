@@ -5,100 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="language" content="en">
     <title>EventScape</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="../Public/css/main.css">
-    <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <!-- FONT AWESOME -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- CSS Link-->
+    <link rel="stylesheet" href="../assets/css/add-event.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!-- FORM UI -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/form.min.css" integrity="sha512-GqdyivmcmveCy9pRf2yTD/TPYXVmbPFDojvy15i3xuLLy9nkgNhDRMk6+Dt/uYDdnItFUFF7WqW7GoGv+gPX+A==" crossorigin="anonymous" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <!-- AOS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <!-- SHORTCUT ICON -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- NAVBAR -->
-
-    <nav class="nav">
-        <div class="nav-main">
-            LOGO
-
-            <div class="nav-toggler">
-                <div class="nav-toggler-icon"></div>
-            </div>
-        </div>
-        <ul class="nav-links">
-            <li class="nav-link"><a href="../index.html">Home</a></li>
-            <li class="nav-link"><a href="./add-event.html">Add an Event</a></li>
-            <li class="nav-link"><a href="#">FAQ</a></li>
-            <li class="nav-link"><a href="./login.html">Login</a></li>
-            <!-- <li class="nav-link">Register</li> -->
-        </ul>
-        
-    </nav>
-
-    <!-- LOGIN FORM -->
+    <!-- Navbar here -->
+    <div class="main-navbar">
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+      
+        <div class="navigation__background">&nbsp;</div>
     
-    <section class="main-forms create-forms">
-
-        <div class="img-create">
-            <img src="/Public/imgs/forms.svg" alt="Could not load the image">
+        <nav class="navigation__nav ">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="../index.html" class="navigation__link"><span><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link"><span><ion-icon name="help-circle-outline"></ion-icon></span>FAQ</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link"><span><ion-icon name="add"></ion-icon></span>Add Event</a></li>
+        </ul>
+        </nav>
+        <div class="navbar-right">
+          <div class="nav-item">
+            <div class="search-bar">
+              <input type="text" placeholder="Search for an Event" required></input>
+              <div class="search-icon"></div>
+            </div>
+          </div>
+          <div class="nav-item"><a href="./login.html">Login</a></div>        </div>
         </div>
-
-        <div class="form-event">
-            <h3 class="heading-form">Add Event</h3>
-            <form action="#" class="form">
-                <div class="form-group form-fix">
-                    <input type="text" id="event-name" class="form-input" placeholder="Name of the Event" required autocomplete="off">
-                    <label for="event-name" class="form-label">Name of the Event</label>
+    
+    <div class="container event">
+      <div class="row">
+        <div class="col-md-7 col-sm-12 illustration">
+          <img src="../assets/imgs/i-1.svg" alt="" class="form-illustration">
+        </div>
+        <div class="col-md-5 col-sm-12 form">
+          <div class="event-details">
+            <form class="needs-validation event-form" novalidate>
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control mx-auto" id="event-name" placeholder="Event Name" required="true" autocomplete="off">
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
                 </div>
-                <div class="form-group form-fix">
-                    <input type="text" id="event-venue" class="form-input" placeholder="Venue" required autocomplete="off">
-                    <label for="event-venue" class="form-label">Venue</label>
+                <div class="form-group mb-4">
+                    <input type="number" class="form-control mx-auto" id="event-price" placeholder="Registration Fee (in Rupees)" required="true" min = "0" step="10" autocomplete="off">
                 </div>
-                <div class="form-group form-fix">
-                    <input type="number" name="event-price" class="form-input" placeholder="Price" required autocomplete="off">
-                    <label for="event-venue" class="form-label">Price</label>
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control mx-auto" name="event-venue" placeholder="Event Venue" required="true" autocomplete="off">
                 </div>
-                <div class="form-group form-fix margin-bottom-m">
-                    <input type="date" id="event-date" name="event-date" class="form-input" required>
+                <div class="form-group mb-4">
+                    <input type="date" class="form-control mx-auto" name="event-date" id="event-date" placeholder="Date" required="true">
                 </div>
-                <div class="form-group form-fix">
-                    <input type="time" name="event-time" id="event-time" class="form-input">
+                <div class="form-group mb-4">
+                    <input type="time" class="form-control mx-auto" name="event-time" id="event-time" placeholder="Time" required="true">
                 </div>
-                <div class="form-group form-fix margin-y-m">
-                    <input type="file" id="real-file" hidden="hidden" />
-                    <button type="button" id="custom-button">Upload an image</button>
-                    <span id="custom-text">No file chosen, yet.</span>
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control mx-auto" name="event-link" placeholder="Registration Link" required="true" autocomplete="off">
                 </div>
-                <div class="form-group">
-                    <textarea id="event-description" class="form-input" placeholder="Description" required autocomplete="off"></textarea>
-                    <label for="event-description" class="form-label">Description</label>
+                <div class="form-group mb-4">
+                  <input type="file" id="real-file" hidden="hidden" />
+                  <button type="button" id="custom-button">Upload an image</button>
+                  <span id="custom-text">No file chosen, yet.</span>
                 </div>
-                <div class="form-options" style="margin-top: -1rem;">
-                    <button class="btn-signup btn-form">Submit</button>
+                <textarea name="event-description" placeholder="Event Description" class="event-description"></textarea><br>
+                <div style="text-align: center;">
+                    <a class="btn btn-submit">Submit</a>
                 </div>
             </form>
+          </div>
         </div>
-
+      </div>
     </div>
-
-        
-
-    </section>
-
-    <footer class="footer">
-        <div class="wave-1" ></div>
-        <div class="wave-2" ></div>
-        <div class="wave-3" ></div>
-        <div class="footer-container">
-            <div class="made-by"> Made with ❤️ by ABCD</div>
-        </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- ICONS -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <!-- JS, Popper.js, and jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../Public/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JS Link-->
+    <script src="../Assets/js/main.js"></script>
 </body>
 </html>
