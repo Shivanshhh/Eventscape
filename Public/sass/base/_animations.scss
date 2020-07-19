@@ -1,0 +1,57 @@
+// FOOTER ANIMATIONS
+
+@keyframes animate {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+@keyframes animateArrow {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 1rem;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes animateStars {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10% {
+        opacity: 1;
+    } 
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}

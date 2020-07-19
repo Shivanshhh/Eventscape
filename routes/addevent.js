@@ -8,10 +8,9 @@ router.get("/", (req, res) => {
 
 router.post('/', async (req,res) =>{
   const newDoc= await Event.create(req.body);
-  console.log("db working")
+  console.log("DB Working")
   res.redirect("/event")
   });
-
 
 module.exports=router;
 

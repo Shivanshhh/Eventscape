@@ -1,0 +1,49 @@
+@import "../abstracts/variables";
+
+.heading{
+    
+    &-main{
+        text-align: left;
+        font-size: 8rem;
+        color: $color-primary-light;
+        letter-spacing: 2px;
+
+        @media only screen and (max-width: 56.25em){
+            padding: 0 11vw;
+        }
+    }
+
+    &-sub{
+        font-size: 2rem;
+        text-align: left;
+        margin-left: .6rem;
+        font-weight: 300;
+        color: rgba($color: #000000, $alpha: 0.8);
+        margin-bottom: 2rem;
+
+        @media only screen and (max-width: 56.25em){
+            padding: 0 11vw;
+        }
+    }
+
+    &-form {
+        margin-left: 15%;
+        margin-bottom: 3rem;
+        font-size: 4rem;
+        font-weight: bold;
+        color: $color-primary;
+
+        @media only screen and (max-width: 50em){
+            margin-left: 10%;
+        }
+
+        @media only screen and (max-width: 46.8em){
+            margin-left: 0;
+        }
+    }
+}
+
+.bolded {
+    font-weight: 700;
+    color: rgba($color: #000000, $alpha: 0.7);
+}

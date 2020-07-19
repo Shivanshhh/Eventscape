@@ -1,0 +1,26 @@
+.dropdown {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: .3rem .8rem;	
+    border: 2px solid #F3F3F4;
+    margin-left: .5rem;
+    border-radius: 3px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    outline: none;
+    -webkit-appearance: button; /* hide default arrow in chrome OSX */
+
+    &-label{
+        font-size: 1.8rem;
+
+        @media only screen and (max-width: 37.5em) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &:active{
+        outline: none;
+    }
+}

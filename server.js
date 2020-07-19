@@ -21,6 +21,6 @@ app.listen(process.env.PORT || 3000, () => {
   console.log(`Listening on ${process.env.PORT || '3000'}`);
 });
 
-//app.use('/', mainRouter);
+// app.use('/', mainRouter);
 app.use('/addevent', eventrouter);
 app.use('/event', currenteventrouter);
