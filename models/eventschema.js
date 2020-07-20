@@ -34,7 +34,7 @@ eventlink:{
 image: 
 { 
     data: Buffer, 
-    contentType: String 
+    contentType: String, 
 },
 eventdescription: {
     type: String,

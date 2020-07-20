@@ -7,7 +7,7 @@ var multer = require('multer');
   
 var storage = multer.diskStorage({ 
   destination: (req, file, cb) => { 
-      cb(null, 'uploads') 
+      cb(null, './routes/uploads') 
   }, 
   filename: (req, file, cb) => { 
       cb(null, file.fieldname + '-' + Date.now()) 
@@ -29,10 +29,12 @@ router.post('/',upload.single('image'), async (req,res) =>{
       eventtime: req.body.eventtime,
       eventlink: req.body.eventlink,
       image:{
-          data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)), 
+          data: fs.readFileSync(path.join(__dirname + '/uploads/')), 
           contentType: 'image/png'
       },
+      eventdescription:req.body.eventdescription,
       });
+
   await Event.create(event);
   console.log("db working")
   res.redirect("/event")
