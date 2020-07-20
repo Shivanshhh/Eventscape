@@ -10,7 +10,7 @@ var storage = multer.diskStorage({
       cb(null, './routes/uploads') 
   }, 
   filename: (req, file, cb) => { 
-      cb(null, file.fieldname + '-' + Date.now()) 
+    cb(null, file.fieldname + '-' + Date.now())  
   } 
 }); 
   
@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
   res.render("add-event.ejs");
 });
 
-router.post('/',upload.single('image'), async (req,res) =>{
+router.post('/', upload.single('image'), async (req,res) =>{
   const event= new Event({
       eventname: req.body.eventname,
       fees: req.body.fees,
@@ -28,17 +28,17 @@ router.post('/',upload.single('image'), async (req,res) =>{
       eventdate: req.body.eventdate,
       eventtime: req.body.eventtime,
       eventlink: req.body.eventlink,
-      image:{
-          data: fs.readFileSync(path.join(__dirname + '/uploads/')), 
+      image: {
+          data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)), 
           contentType: 'image/png'
       },
       eventdescription:req.body.eventdescription,
       });
 
-  await Event.create(event);
-  console.log("db working")
-  res.redirect("/event")
-  });
+await Event.create(event);
+console.log("db working")
+res.redirect("/event")
+});
 
 module.exports=router;
 
