@@ -46,21 +46,23 @@
     <div class="container event">
       <div class="row">
         <div class="col-md-7 col-sm-12">
+          <h2><%=record.eventname%></h2>
           <div class="event-image">
-            <img src="/imgs/event2.jpeg" alt="">
+            <img src="data:image/<%=record.image.contentType%>;base64, 
+                     <%=record.image.data.toString('base64')%>"> 
           </div>
         </div>
         <div class="col-md-5 col-sm-12">
             <div class="event-details">
-                <div class="event-date"><i class="icon"><ion-icon name="calendar"></ion-icon></i>&nbsp;&nbsp; 12th March 2020</div>
-                <div class="event-venue"><i class="icon"><ion-icon name="location"></ion-icon></i>&nbsp;&nbsp; Kamraj Auditorium</div>
-                <div class="event-price"><i class="icon"><ion-icon name="wallet"></ion-icon></i>&nbsp;&nbsp; 450</div>
+                <div class="event-date"><i class="icon"><ion-icon name="calendar"></ion-icon></i>&nbsp;&nbsp; Date: <%=record.eventdate%> </div>
+                <div class="event-venue"><i class="icon"><ion-icon name="location"></ion-icon></i>&nbsp;&nbsp; Venue: <%=record.eventvenue%></div>
+                <div class="event-price"><i class="icon"><ion-icon name="wallet"></ion-icon></i>&nbsp;&nbsp; Rs. <%=record.fees%></div>
                 <div class="event-description">
-                  <p>Lorem ipsum dolor sit amet cons adipisicing elit. Est vero nisi acc debitis quas dolore nihil, blanditiis, in, consectetur voluptatem veritatis veniam quaerat expedita ut? Culpamagni, laborum placeat delectus praesentium omnis nesciunt in autem distinctio voluptatibus ducimus cum, id possimus? Odit sit, temporibus magni nisi blanditiis quisquam expedita!</p>
+                  <p> <%=record.eventdescription%></p>
                 </div>
                 <div class="event-response">
                   <button class="btn btn-event-item">Add to Calender</button>
-                  <button class="btn btn-event-item">Register</button>
+                  <a type='button' href='<%=record.eventlink%>' class="btn btn-event-item">Register</a>
                 </div>
             </div>
         </div>

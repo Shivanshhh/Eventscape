@@ -41,35 +41,35 @@
       <!-- Form -->
       <section class="form form_login">
         <h2 class="form-header">Login</h2>
-          <form action="#">
+          <form method="POST" action="/register/login" >
               <div class="form_group">
-                <input type="text" class="form_input" placeholder="email" required autocomplete="off">
+                <input type="text" class="form_input" placeholder="email" name="email" required autocomplete="off">
               </div>   
               <div class="form_group">
-                <input type="password" class="form_input" placeholder="password" required>
+                <input type="password" class="form_input" placeholder="password" name='password' required>
               </div>  
-              <div class="form_group"><a class="btn btn-submit">Login</a></div>
+              <div class="form_group"><button type='submit' class="btn btn-submit">Login</button></div>
           </form>
           <h3 class="form-direction">Not a member?<a id="form-direct--login"> Sign Up</a></h3>
       </section>
 
       <section class="form form_signup hide">
         <h2 class="form-header">Sign Up</h2>
-          <form action="#">
+          <form method="POST" action="/register">
             <div class="form_group">
-                <input type="text" class="form_input" placeholder="username" required autocomplete="off">
+                <input type="text" class="form_input" placeholder="username" name='username' required autocomplete="off">
               </div> 
               <div class="form_group">
-                <input type="email" class="form_input" placeholder="email" required autocomplete="off">
+                <input type="email" class="form_input" placeholder="email" name='email' required autocomplete="off">
               </div>   
               <div class="form_group">
-                <input type="password" class="form_input" placeholder="password" required>
+                <input type="password" class="form_input" placeholder="password" name='password' required>
               </div>  
               <div class="form_group">
-                <input type="password" class="form_input" placeholder="confirm password" required>
+                <input type="password" class="form_input" placeholder="confirm password" name='confirmpassword' required>
               </div>  
               <div style="text-align: center;">
-                <a class="btn btn-submit">Sign Up</a>
+                <button type ='submit' class="btn btn-submit">Sign Up</button>
             </div>
           </form>
           <h3 class="form-direction">Already a member?<a id="form-direct--signup"> Log in</a></h3>
@@ -81,6 +81,6 @@
       <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-      <script src="../assets/js/main.js"></script>
+      <script src="/js/main.js"></script>
 </body>
 </html>
