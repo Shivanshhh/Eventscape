@@ -40,19 +40,22 @@
 
     <nav class="navigation__nav ">
       <ul class="navigation__list">
-        <li class="navigation__item"><a href="./index.ejs" class="navigation__link"><span><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
+        <li class="navigation__item"><a href="/home" class="navigation__link"><span><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
         <li class="navigation__item"><a href="#faq" class="navigation__link"><span><ion-icon name="help-circle-outline"></ion-icon></span>FAQ</a></li>
-        <li class="navigation__item"><a href="views/add-event.ejs" class="navigation__link"><span><ion-icon name="add"></ion-icon></span>Add Event</a></li>
+        <li class="navigation__item"><a href="/addevent" class="navigation__link"><span><ion-icon name="add"></ion-icon></span>Add Event</a></li>
     </ul>
     </nav>
     <div class="navbar-right">
       <div class="nav-item">
         <div class="search-bar">
-          <input type="text" placeholder="Search for an Event" required></input>
+          <form name="searchBox" target="#here" method="post">
+            <input type="text" placeholder="Search for an Event" required></input></br>
+            <input type="submit" style="height: 0px; width: 0px; border: none; padding: 0px;" hidefocus="true" />
+        </form>
           <div class="search-icon"></div>
         </div>
       </div>
-      <div class="nav-item"><a href="views/login.ejs">Login</a></div>
+      <div class="nav-item"><a href="/login">Login</a></div>
     </div>
   </div>
   
@@ -201,7 +204,8 @@
             <div class="card card__main">
               <div class="card__side card__side--front">
                 <div>
-                  <img src=imgs/cover1.png  class="card__picture">
+                  <img src="data:image/<%=image.contentType%>;base64, 
+                     <%=image.data.toString('base64')%>" class="card__picture">
                 </div>
               </div>
               <div class="card__side card__side--back">

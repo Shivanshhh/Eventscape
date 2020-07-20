@@ -30,7 +30,7 @@ router.post('/', upload.single('image'), async (req,res) =>{
       eventlink: req.body.eventlink,
       image: {
           data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)), 
-          contentType: 'image/png'
+          contentType: 'image/png',
       },
       eventdescription:req.body.eventdescription,
       });

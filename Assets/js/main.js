@@ -62,3 +62,9 @@ $("#form-direct--signup").on('click', (e) =>{
     $(".form_signup").addClass("hide");
     $(".form_login").removeClass("hide");
 });
+
+$('#form input').keydown(function(e) {
+  if (e.keyCode == 13) {
+      $('#form').submit();
+  }
+});

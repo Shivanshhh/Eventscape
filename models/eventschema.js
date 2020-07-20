@@ -35,6 +35,7 @@ image:
 { 
     data: Buffer, 
     contentType: String, 
+
 },
 eventdescription: {
     type: String,
