@@ -55,6 +55,7 @@ $("#form-direct--login").on('click', (e) =>{
     e.preventDefault();
     $(".form_login").addClass("hide");
     $(".form_signup").removeClass("hide");
+    
 });
 $("#form-direct--signup").on('click', (e) =>{
     e.preventDefault();

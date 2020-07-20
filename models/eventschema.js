@@ -31,10 +31,10 @@ eventlink:{
     required: [true],
     trim: true,
 },
-eventimg:{
-    type: String,
-    required:[true],
-    trim: true,
+image: 
+{ 
+    data: Buffer, 
+    contentType: String 
 },
 eventdescription: {
     type: String,

@@ -8,7 +8,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- CSS Link-->
-    <link rel="stylesheet" href="../assets/css/add-event.css">
+    <link rel="stylesheet" href="/css/add-event.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -47,40 +47,40 @@
     <div class="container event">
       <div class="row">
         <div class="col-md-7 col-sm-12 illustration">
-          <img src="../assets/imgs/i-1.svg" alt="" class="form-illustration">
+          <img src="/imgs/i-1.svg" alt="" class="form-illustration">
         </div>
         <div class="col-md-5 col-sm-12 form">
           <div class="event-details">
-            <form class="needs-validation event-form" novalidate>
+            <form class="needs-validation event-form" method='POST' action='/addevent' novalidate>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control mx-auto" id="event-name" placeholder="Event Name" required="true" autocomplete="off">
+                    <input type="text" class="form-control mx-auto" name="eventname" id="event-name" placeholder="Event Name" required="true" autocomplete="off">
                     <div class="valid-feedback">
                         Looks Good!
                     </div>
                 </div>
                 <div class="form-group mb-4">
-                    <input type="number" class="form-control mx-auto" id="event-price" placeholder="Registration Fee (in Rupees)" required="true" min = "0" step="10" autocomplete="off">
+                    <input type="number" class="form-control mx-auto" id="event-price" name='fees' placeholder="Registration Fee (in Rupees)" required="true" min = "0" step="10" autocomplete="off">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control mx-auto" name="event-venue" placeholder="Event Venue" required="true" autocomplete="off">
+                    <input type="text" class="form-control mx-auto" name="eventvenue" placeholder="Event Venue" required="true" autocomplete="off">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="date" class="form-control mx-auto" name="event-date" id="event-date" placeholder="Date" required="true">
+                    <input type="date" class="form-control mx-auto" name="eventdate" id="event-date" placeholder="Date" required="true">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="time" class="form-control mx-auto" name="event-time" id="event-time" placeholder="Time" required="true">
+                    <input type="time" class="form-control mx-auto" name="eventtime" id="event-time" placeholder="Time" required="true">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control mx-auto" name="event-link" placeholder="Registration Link" required="true" autocomplete="off">
+                    <input type="text" class="form-control mx-auto" name="eventlink" placeholder="Registration Link" required="true" autocomplete="off">
                 </div>
                 <div class="form-group mb-4">
-                  <input type="file" id="real-file" hidden="hidden" />
-                  <button type="button" id="custom-button">Upload an image</button>
+                  <input type="file" id="custom-button"
+                       name="image" value="" required>
                   <span id="custom-text">No file chosen, yet.</span>
                 </div>
-                <textarea name="event-description" placeholder="Event Description" class="event-description"></textarea><br>
+                <textarea name="eventdescription" placeholder="Event Description" class="event-description"></textarea><br>
                 <div style="text-align: center;">
-                    <a class="btn btn-submit">Submit</a>
+                    <button type='submit' class="btn btn-submit">Submit</button>
                 </div>
             </form>
           </div>
@@ -97,6 +97,6 @@
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- JS Link-->
-    <script src="../Assets/js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
