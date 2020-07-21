@@ -3,10 +3,11 @@ const router = express.Router();
 const mongoose=require("mongoose");
 const Event = require('../models/eventschema');
 
-router.get("/", async(req,res)=>{
-    var alldata= await Event.find({});
-    console.log(alldata[alldata.length -1])
-    res.render('event', {record: alldata[alldata.length -1]}) 
+router.get("/:event", async(req,res)=>{
+    const { event } = req.params;
+    var alldata= await Event.findOne({eventname: event});
+    console.log(alldata)
+    res.render('event', {record: alldata})
 });
 
 module.exports= router;

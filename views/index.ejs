@@ -40,19 +40,21 @@
 
     <nav class="navigation__nav ">
       <ul class="navigation__list">
-        <li class="navigation__item"><a href="./index.ejs" class="navigation__link"><span><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
+        <li class="navigation__item"><a href="/home" class="navigation__link"><span><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
         <li class="navigation__item"><a href="#faq" class="navigation__link"><span><ion-icon name="help-circle-outline"></ion-icon></span>FAQ</a></li>
-        <li class="navigation__item"><a href="views/add-event.ejs" class="navigation__link"><span><ion-icon name="add"></ion-icon></span>Add Event</a></li>
+        <li class="navigation__item"><a href="/addevent" class="navigation__link"><span><ion-icon name="add"></ion-icon></span>Add Event</a></li>
     </ul>
     </nav>
     <div class="navbar-right">
       <div class="nav-item">
         <div class="search-bar">
-          <input type="text" placeholder="Search for an Event" required></input>
+          <form action="/home" method="POST">
+            <input type="text" name="event" placeholder="Search for an Event" required></input></br>
+        </form>
           <div class="search-icon"></div>
         </div>
       </div>
-      <div class="nav-item"><a href="views/login.ejs">Login</a></div>
+      <div class="nav-item"><a href="/register">Login</a></div>
     </div>
   </div>
   
@@ -64,16 +66,25 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          
+          <a href="/event/<%=name[0]%>">
+          <img src="data:image/<%=image[0].contentType%>;base64, 
+          <%=image[1].data.toString('base64')%>" class="carousel-inner" >
+        </a>
         </div>
         <div class="carousel-item">
           <div class="container carousel-item-inner">
-            
+            <a href="/event/<%=name[1]%>">
+            <img src="data:image/<%=image[1].contentType%>;base64, 
+                <%=image[1].data.toString('base64')%>" class="carousel-inner" >
+              </a>
           </div>
         </div>
         <div class="carousel-item">
           <div class="container carousel-item-inner">
-            
+            <a href="/event/<%=name[2]%>">
+            <img src="data:image/<%=image[2].contentType%>;base64, 
+                <%=image[2].data.toString('base64')%>" class="carousel-inner">
+              </a>
           </div>
         </div>
       </div>
@@ -118,15 +129,17 @@
           <div class="col-md-6 col-sm-12 col-lg-4">
             <div class="card card__main">
               <div class="card__side card__side--front">
-                <div class="card__picture">
-                  
+                <div>
+                <img src="data:image/<%=image[0].contentType%>;base64, 
+                <%=image[0].data.toString('base64')%>" class="card__picture" >
                 </div>
+                
               </div>
               <div class="card__side card__side--back">
                 <div class="card-details">
                   <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
-                  <a href="#" class="btn card-btn btn-more"><span>Know more</span></a>
-                  <a href="#" class="btn card-btn btn-register"><span>Register</span></a>
+                  <a href="/event/<%=name[0]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                  <a href="<%=link[0]%>" class="btn card-btn btn-register"><span>Register</span></a>
                 </div>
               </div>
             </div>
@@ -134,15 +147,17 @@
           <div class="col-md-6 col-sm-12 col-lg-4">
             <div class="card card__main">
               <div class="card__side card__side--front">
-                <div class="card__picture">
-                  
+                <div>
+                <img src="data:image/<%=image[1].contentType%>;base64, 
+                <%=image[1].data.toString('base64')%>" class="card__picture" >
                 </div>
+                
               </div>
               <div class="card__side card__side--back">
                 <div class="card-details">
                   <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
-                  <a href="#" class="btn card-btn btn-more"><span>Know more</span></a>
-                  <a href="#" class="btn card-btn btn-register"><span>Register</span></a>
+                  <a href="/event/<%=name[1]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                  <a href="<%=link[1]%>" class="btn card-btn btn-register"><span>Register</span></a>
                 </div>
               </div>
             </div>
@@ -150,15 +165,17 @@
           <div class="col-md-6 col-sm-12 col-lg-4">
             <div class="card card__main">
               <div class="card__side card__side--front">
-                <div class="card__picture">
-                  
+                <div>
+                <img src="data:image/<%=image[2].contentType%>;base64, 
+                <%=image[2].data.toString('base64')%>" class="card__picture" >
                 </div>
+                
               </div>
               <div class="card__side card__side--back">
                 <div class="card-details">
                   <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
-                  <a href="#" class="btn card-btn btn-more"><span>Know more</span></a>
-                  <a href="#" class="btn card-btn btn-register"><span>Register</span></a>
+                  <a href="/event/<%=name[2]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                  <a href="<%=link[2]%>" class="btn card-btn btn-register"><span>Register</span></a>
                 </div>
               </div>
             </div>
@@ -168,31 +185,17 @@
           <div class="col-md-6 col-sm-12 col-lg-4">
             <div class="card card__main">
               <div class="card__side card__side--front">
-                <div class="card__picture">
-                  
+                <div>
+                <img src="data:image/<%=image[3].contentType%>;base64, 
+                <%=image[3].data.toString('base64')%>" class="card__picture" >
                 </div>
+                
               </div>
               <div class="card__side card__side--back">
                 <div class="card-details">
                   <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
-                  <a href="#" class="btn card-btn btn-more"><span>Know more</span></a>
-                  <a href="#" class="btn card-btn btn-register"><span>Register</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12 col-lg-4">
-            <div class="card card__main">
-              <div class="card__side card__side--front">
-                <div class="card__picture">
-                  
-                </div>
-              </div>
-              <div class="card__side card__side--back">
-                <div class="card-details">
-                  <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
-                  <a href="#" class="btn card-btn btn-more"><span>Know more</span></a>
-                  <a href="#" class="btn card-btn btn-register"><span>Register</span></a>
+                  <a href="/event/<%=name[3]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                  <a href="<%=link[3]%>" class="btn card-btn btn-register"><span>Register</span></a>
                 </div>
               </div>
             </div>
@@ -201,14 +204,33 @@
             <div class="card card__main">
               <div class="card__side card__side--front">
                 <div>
-                  <img src=imgs/cover1.png  class="card__picture">
+                <img src="data:image/<%=image[4].contentType%>;base64, 
+                <%=image[4].data.toString('base64')%>" class="card__picture" >
+                </div>
+                
+              </div>
+              <div class="card__side card__side--back">
+                <div class="card-details">
+                  <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
+                  <a href="/event/<%=name[4]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                  <a href="<%=link[4]%>" class="btn card-btn btn-register"><span>Register</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 col-lg-4">
+            <div class="card card__main">
+              <div class="card__side card__side--front">
+                <div>
+                  <img src="data:image/<%=image[5].contentType%>;base64, 
+                     <%=image[5].data.toString('base64')%>" class="card__picture" >
                 </div>
               </div>
               <div class="card__side card__side--back">
                 <div class="card-details">
                   <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
-                  <a href="#" class="btn card-btn btn-more"><span>Know more</span></a>
-                  <a href="#" class="btn card-btn btn-register"><span>Register</span></a>
+                  <a href="/event/<%=name[5]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                  <a href="<%=link[5]%>" class="btn card-btn btn-register"><span>Register</span></a>
                 </div>
               </div>
             </div>
@@ -220,6 +242,7 @@
       <section id="technical">
 
         <!-- Technical section code goes here -->
+        
 
       </section>
 

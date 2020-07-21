@@ -21,6 +21,7 @@ router.get("/", (req, res) => {
 });
 
 router.post('/', upload.single('image'), async (req,res) =>{
+  var eventname= req.body.eventname;
   const event= new Event({
       eventname: req.body.eventname,
       fees: req.body.fees,
@@ -30,14 +31,14 @@ router.post('/', upload.single('image'), async (req,res) =>{
       eventlink: req.body.eventlink,
       image: {
           data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)), 
-          contentType: 'image/png'
+          contentType: 'image/png',
       },
       eventdescription:req.body.eventdescription,
       });
 
 await Event.create(event);
-console.log("db working")
-res.redirect("/event")
+console.log("db working");
+res.redirect(`/event/${eventname}`);
 });
 
 module.exports=router;
