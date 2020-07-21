@@ -7,6 +7,7 @@ const saltRounds = 10;
 router.get('/', (req, res) => 
 {
     res.render('login');
+    
 });
 
 
