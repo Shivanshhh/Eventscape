@@ -23,18 +23,19 @@
         <nav class="navigation__nav ">
           <ul class="navigation__list">
             <li class="navigation__item"><a href="/home" class="navigation__link"><span><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link"><span><ion-icon name="help-circle-outline"></ion-icon></span>FAQ</a></li>
+            <li class="navigation__item"><a href="/home#faq" class="navigation__link"><span><ion-icon name="help-circle-outline"></ion-icon></span>FAQ</a></li>
             <li class="navigation__item"><a href="/addevent" class="navigation__link"><span><ion-icon name="add"></ion-icon></span>Add Event</a></li>
         </ul>
         </nav>
         <div class="navbar-right">
           <div class="nav-item">
             <div class="search-bar">
-              <input type="text" placeholder="Search for an Event" required></input>
-              <div class="search-icon"></div>
+              <form action="/home" method="POST">
+                <input type="text" name="event" placeholder="Search for an Event" required></input></br>
+            </form>              <div class="search-icon"></div>
             </div>
           </div>
-          <div class="nav-item">Login</div>
+          <div style="color: transparent" class="nav-item">Login</div>
         </div>
       </div>
 

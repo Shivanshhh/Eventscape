@@ -28,7 +28,7 @@ router.post('/login', async (req, res) => {
     const f = await User.findOne({ email: email1 });
     if (f) {
       if (bcrypt.compareSync(password1, f.password)) {
-        res.render('add-event');
+        res.redirect('/home');
       } else {
         res.send( 'wrong-password' );
       }
