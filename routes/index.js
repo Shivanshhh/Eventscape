@@ -32,17 +32,23 @@ for(i=0;i<7;i++)
 {
   dates = nextDate[i];
 }
-
-
-for(i=0;i<6;i++)
-{
+console.log()
+var p =0;
+ var i =0;
+  
   alldata.forEach(function(doc) {
    const d = new Date(doc.eventdate).getTime();
-      if(d==nextDate[i]){
+   if (i>5)
+   {
+     alldate = 0;
+   }
+      if(d===nextDate[i]){
     event_pics.push(doc.image);
-  return;}})
-};
+    i = i +1; 
+     p = p + 1;
+  }})
 
+console.log(p);
 console.log(event_pics);
 //console.log(event_pics[4])
 ;
