@@ -3,6 +3,7 @@ const Event = require('../models/eventschema');
 const router = express.Router();
 var event_date = [];
 var event_pics = [];
+var event_names = [];
 router.get('/home', async (req,res) => {
 
   var alldata= await Event.find({});
@@ -44,6 +45,7 @@ var p =0;
    }
       if(d===nextDate[i]){
     event_pics.push(doc.image);
+    event_names.push(doc.eventname)
     i = i +1; 
      p = p + 1;
   }})
@@ -52,7 +54,7 @@ console.log(p);
 console.log(event_pics);
 //console.log(event_pics[4])
 ;
-res.render('index.ejs', {image: event_pics , image1: event_pics});
+res.render('index.ejs', {image: event_pics , image1: event_pics, name: event_names});
 
 });
 
