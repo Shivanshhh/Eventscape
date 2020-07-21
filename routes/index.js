@@ -34,18 +34,19 @@ for(i=0;i<7;i++)
 }
 
 
-alldata.forEach(function(doc) 
+for(i=0;i<6;i++)
 {
-  for(i=0;i<7;i++){
+  alldata.forEach(function(doc) {
    const d = new Date(doc.eventdate).getTime();
       if(d==nextDate[i]){
-    event_pics.push(doc.image);}
-}});
+    event_pics.push(doc.image);
+  return;}})
+};
 
 console.log(event_pics);
-console.log(event_pics[4])
+//console.log(event_pics[4])
 ;
-res.render('index.ejs', {image: event_pics[0]});
+res.render('index.ejs', {image: event_pics , image1: event_pics});
 
 });
 

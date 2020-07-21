@@ -50,12 +50,11 @@
         <div class="search-bar">
           <form name="searchBox" target="#here" method="post">
             <input type="text" placeholder="Search for an Event" required></input></br>
-            <input type="submit" style="height: 0px; width: 0px; border: none; padding: 0px;" hidefocus="true" />
         </form>
           <div class="search-icon"></div>
         </div>
       </div>
-      <div class="nav-item"><a href="/login">Login</a></div>
+      <div class="nav-item"><a href="/register">Login</a></div>
     </div>
   </div>
   
@@ -67,15 +66,21 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
+          <img src="data:image/<%=image1[0].contentType%>;base64, 
+          <%=image1[0].data.toString('base64')%>" class="carousel-inner" >
           
         </div>
         <div class="carousel-item">
           <div class="container carousel-item-inner">
+            <img src="data:image/<%=image1[1].contentType%>;base64, 
+                <%=image1[1].data.toString('base64')%>" class="carousel-inner" >
             
           </div>
         </div>
         <div class="carousel-item">
           <div class="container carousel-item-inner">
+            <img src="data:image/<%=image1[2].contentType%>;base64, 
+                <%=image1[2].data.toString('base64')%>" class="carousel-inner">
             
           </div>
         </div>
@@ -121,9 +126,11 @@
           <div class="col-md-6 col-sm-12 col-lg-4">
             <div class="card card__main">
               <div class="card__side card__side--front">
-                <div class="card__picture">
-                  
+                <div>
+                <img src="data:image/<%=image[0].contentType%>;base64, 
+                <%=image[0].data.toString('base64')%>" class="card__picture" >
                 </div>
+                
               </div>
               <div class="card__side card__side--back">
                 <div class="card-details">
@@ -137,9 +144,11 @@
           <div class="col-md-6 col-sm-12 col-lg-4">
             <div class="card card__main">
               <div class="card__side card__side--front">
-                <div class="card__picture">
-                  
+                <div>
+                <img src="data:image/<%=image[1].contentType%>;base64, 
+                <%=image[1].data.toString('base64')%>" class="card__picture" >
                 </div>
+                
               </div>
               <div class="card__side card__side--back">
                 <div class="card-details">
@@ -153,9 +162,11 @@
           <div class="col-md-6 col-sm-12 col-lg-4">
             <div class="card card__main">
               <div class="card__side card__side--front">
-                <div class="card__picture">
-                  
+                <div>
+                <img src="data:image/<%=image[2].contentType%>;base64, 
+                <%=image[2].data.toString('base64')%>" class="card__picture" >
                 </div>
+                
               </div>
               <div class="card__side card__side--back">
                 <div class="card-details">
@@ -171,25 +182,11 @@
           <div class="col-md-6 col-sm-12 col-lg-4">
             <div class="card card__main">
               <div class="card__side card__side--front">
-                <div class="card__picture">
-                  
+                <div>
+                <img src="data:image/<%=image[3].contentType%>;base64, 
+                <%=image[3].data.toString('base64')%>" class="card__picture" >
                 </div>
-              </div>
-              <div class="card__side card__side--back">
-                <div class="card-details">
-                  <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
-                  <a href="#" class="btn card-btn btn-more"><span>Know more</span></a>
-                  <a href="#" class="btn card-btn btn-register"><span>Register</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12 col-lg-4">
-            <div class="card card__main">
-              <div class="card__side card__side--front">
-                <div class="card__picture">
-                  
-                </div>
+                
               </div>
               <div class="card__side card__side--back">
                 <div class="card-details">
@@ -204,8 +201,26 @@
             <div class="card card__main">
               <div class="card__side card__side--front">
                 <div>
-                  <img src="data:image/<%=image.contentType%>;base64, 
-                     <%=image.data.toString('base64')%>" class="card__picture">
+                <img src="data:image/<%=image[4].contentType%>;base64, 
+                <%=image[4].data.toString('base64')%>" class="card__picture" >
+                </div>
+                
+              </div>
+              <div class="card__side card__side--back">
+                <div class="card-details">
+                  <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
+                  <a href="#" class="btn card-btn btn-more"><span>Know more</span></a>
+                  <a href="#" class="btn card-btn btn-register"><span>Register</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 col-lg-4">
+            <div class="card card__main">
+              <div class="card__side card__side--front">
+                <div>
+                  <img src="data:image/<%=image[5].contentType%>;base64, 
+                     <%=image[5].data.toString('base64')%>" class="card__picture" >
                 </div>
               </div>
               <div class="card__side card__side--back">
