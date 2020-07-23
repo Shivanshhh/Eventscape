@@ -1,11 +1,12 @@
 const express = require('express');
 const Event = require('../models/eventschema');
 const router = express.Router();
-var event_date = [];
-var event_pics = [];
-var event_names = [];
-var event_links = [];
+
 router.get('/home', async (req,res) => {
+  var event_date = [];
+  var event_pics = [];
+  var event_names = [];
+  var event_links = [];
 
   var alldata= await Event.find({});
   alldata.forEach(function(doc) 
@@ -34,23 +35,25 @@ for(i=0;i<7;i++)
 {
   dates = nextDate[i];
 }
-console.log()
+console.log(alldata)
 var p =0;
  var i =0;
-  
+for (i=0;i<6;i++){
+  q=0;
   alldata.forEach(function(doc) {
+    console.log(doc)
    const d = new Date(doc.eventdate).getTime();
-   if (i>5)
-   {
-     alldate = 0;
-   }
-      if(d===nextDate[i]){
+   console.log('doc'  +d)
+   console.log('date' +nextDate[i])
+      if(d==nextDate[i] && q!=1){
     event_pics.push(doc.image);
     event_names.push(doc.eventname);
     event_links.push(doc.eventlink)
-    i = i +1; 
+    delete alldata[doc];
      p = p + 1;
-  }})
+     q = 1;
+     console.log(i)
+  }})};
 
 console.log(p);
 console.log(event_pics);
