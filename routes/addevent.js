@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const session= require('express-session');
-const Event = require('../models/eventschema');
+const Ev = require('../models/eventschema');
 var fs = require('fs'); 
 var path = require('path'); 
 var multer = require('multer'); 
@@ -31,10 +31,10 @@ router.get('/', redirectLogin, (req, res) => {
 
 router.post('/', upload.single('image'), async (req,res) =>{
   var eventname= req.body.eventname;
-  const event= new Event({
+  const event= new Ev.Event({
       eventname: req.body.eventname,
       fees: req.body.fees,
-      eventtype: req.body.eventtype,
+      eventtype: req.body.type,
       eventvenue: req.body.eventvenue,
       eventdate: req.body.eventdate,
       eventtime: req.body.eventtime,
@@ -46,7 +46,8 @@ router.post('/', upload.single('image'), async (req,res) =>{
       eventdescription:req.body.eventdescription,
       });
 
-await Event.create(event);
+await Ev.Event.create(event);
+await Ev.Event1.create(event);
 console.log("db working");
 res.redirect(`/event/${eventname}`);
 });

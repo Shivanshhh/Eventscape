@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require("mongoose");
-const Event = require('../models/eventschema');
+const Ev = require('../models/eventschema');
 
 router.get("/:event", async (req, res) => {
     const { event } = req.params;
     html = '';
-    var alldata = await Event.find({eventname:{$regex: event ,$options:'i'}});
+    var alldata = await Ev.Event1.find({eventname:{$regex: event ,$options:'i'}});
   alldata.forEach(function (doc) {
     html += `<div class="col-md-6 col-sm-12 col-lg-4">
     <div class="card card__main">

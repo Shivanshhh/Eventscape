@@ -50,4 +50,8 @@ eventdescription: {
 });
 
 const Event=mongoose.model('Event', eventSchema);
-module.exports= Event;
+const Event1=mongoose.model('Event1', eventSchema);
+module.exports= {
+    Event,
+    Event1,
+};

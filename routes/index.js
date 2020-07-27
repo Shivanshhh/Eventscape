@@ -1,5 +1,5 @@
 const express = require('express');
-const Event = require('../models/eventschema');
+const Ev = require('../models/eventschema');
 const router = express.Router();
 
 router.get('/home', async (req, res) => {
@@ -9,9 +9,14 @@ router.get('/home', async (req, res) => {
   var event_links = [];
   var event_types = [];
 
-  var alldata = await Event.find({});
-  alldata.forEach(function (doc) {
-    event_date.push(doc.eventdate);
+  var alldata = await Ev.Event.find({});
+  alldata.forEach(async (doc) => {
+    q = new Date(doc.eventdate).getTime();
+    if ((Date.now() - q)< 0 ){
+     await Ev.Event.findByIdAndDelete(doc._id);
+     }
+     else{
+    event_date.push(doc.eventdate);}
   });
   console.log(event_date);
 
