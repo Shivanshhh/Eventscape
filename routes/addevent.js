@@ -45,9 +45,24 @@ router.post('/', upload.single('image'), async (req,res) =>{
       },
       eventdescription:req.body.eventdescription,
       });
+      const event1= new Ev.Event1({
+        eventname: req.body.eventname,
+        fees: req.body.fees,
+        eventtype: req.body.type,
+        eventvenue: req.body.eventvenue,
+        eventdate: req.body.eventdate,
+        eventtime: req.body.eventtime,
+        eventlink: req.body.eventlink,
+        image: {
+            data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)), 
+            contentType: 'image/png',
+        },
+        eventdescription:req.body.eventdescription,
+        });
+  
 
 await Ev.Event.create(event);
-await Ev.Event1.create(event);
+await Ev.Event1.create(event1);
 console.log("db working");
 res.redirect(`/event/${eventname}`);
 });
