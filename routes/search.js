@@ -19,7 +19,7 @@ router.get("/:event", async (req, res) => {
       </div>
       <div class="card__side card__side--back">
         <div class="card-details">
-          <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
+          <h4>Event Type: &nbsp;<span class="event-type">${doc.eventtype}</span></h4>
           <a href="/event/${doc.eventname}" class="btn card-btn btn-more"><span>Know more</span></a>
           <a href="${doc.eventlink}" class="btn card-btn btn-register"><span>Register</span></a>
         </div>

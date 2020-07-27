@@ -47,8 +47,8 @@ router.get('/home', async (req, res) => {
       if (d == nextDate[i] && q != 1) {
         event_pics.push(doc.image);
         event_names.push(doc.eventname);
-        event_links.push(doc.eventlink)
-        //event_types.push(doc.)
+        event_links.push(doc.eventlink);
+        event_types.push(doc.eventtype);
         delete alldata[doc];
         q = 1;
       }
@@ -59,7 +59,7 @@ router.get('/home', async (req, res) => {
   // console.log(event_pics);
   //console.log(event_pics[4])
   ;
-  res.render('index.ejs', { image: event_pics, image1: event_pics, name: event_names, link: event_links });
+  res.render('index.ejs', { image: event_pics, image1: event_pics, name: event_names, link: event_links, type: event_types });
 
 });
 
