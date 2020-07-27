@@ -7,6 +7,7 @@ const dotenv = require('dotenv');
 const mainRouter = require('./routes/index');
 const eventrouter = require('./routes/addevent')
 const currenteventrouter= require('./routes/event')
+const searchrouter= require('./routes/search')
 const regroute = require('./routes/reg-login')
 const app = express();
 const mongoose = require('mongoose');
@@ -37,5 +38,6 @@ app.listen(process.env.PORT || 3000, () => {
 
 app.use('/', mainRouter);
 app.use('/addevent', eventrouter);
+app.use('/search', searchrouter);
 app.use('/event', currenteventrouter);
 app.use('/register', regroute);

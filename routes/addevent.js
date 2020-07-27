@@ -34,6 +34,7 @@ router.post('/', upload.single('image'), async (req,res) =>{
   const event= new Event({
       eventname: req.body.eventname,
       fees: req.body.fees,
+      eventtype: req.body.eventtype,
       eventvenue: req.body.eventvenue,
       eventdate: req.body.eventdate,
       eventtime: req.body.eventtime,
