@@ -1,9 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const session= require('express-session');
 const Event = require('../models/eventschema');
 var fs = require('fs'); 
 var path = require('path'); 
 var multer = require('multer'); 
+
+const redirectLogin = (req, res, next) => {
+  if (!req.session.userId) {
+    res.redirect('/register');
+  } else {
+    next();
+  }
+}; 
   
 var storage = multer.diskStorage({ 
   destination: (req, file, cb) => { 
@@ -16,8 +25,8 @@ var storage = multer.diskStorage({
   
 var upload = multer({ storage: storage }); 
 
-router.get("/", (req, res) => {
-  res.render("add-event.ejs");
+router.get('/', redirectLogin, (req, res) => {
+  res.render('add-event');
 });
 
 router.post('/', upload.single('image'), async (req,res) =>{

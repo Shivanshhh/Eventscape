@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const session= require('express-session');
 const path = require('path');
 const fs = require('fs');
 const dotenv = require('dotenv');
@@ -15,6 +16,15 @@ dotenv.config();
 
 require('./models/db');
 
+app.use(session({
+  secret: 'secret',
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    maxAge: 3000000,
+    sameSite: true,
+  },
+}));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
