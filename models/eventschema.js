@@ -26,6 +26,11 @@ eventdate:{
     required: [true],
     trim: true,
 },
+eventtech:{
+    type: String,
+    required: [true],
+    trim: true,
+},
 eventtime:{
     type: String,
     required: [true],

@@ -244,7 +244,117 @@
     <section id="technical" class="hide">
 
       <!-- Technical section code goes here -->
+      <div class="row event-row" data-aos="fade-up" data-aos-duration="1800">
+        <div class="col-md-6 col-sm-12 col-lg-4">
+          <div class="card card__main">
+            <div class="card__side card__side--front">
+              <div>
+                <img src="data:image/<%=timage[0].contentType%>;base64, 
+                <%=timage[0].data.toString('base64')%>" class="card__picture">
+              </div>
 
+            </div>
+            <div class="card__side card__side--back">
+              <div class="card-details">
+                <h4>Event Type: &nbsp;<span class="event-type"><%=ttype[0]%></span></h4>
+                <a href="/event/<%=tname[0]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                <a href="<%=tlink[0]%>" class="btn card-btn btn-register"><span>Register</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-4">
+          <div class="card card__main">
+            <div class="card__side card__side--front">
+              <div>
+                <img src="data:image/<%=timage[1].contentType%>;base64, 
+                <%=timage[1].data.toString('base64')%>" class="card__picture">
+              </div>
+
+            </div>
+            <div class="card__side card__side--back">
+              <div class="card-details">
+                <h4>Event Type: &nbsp;<span class="event-type"><%=ttype[1]%></span></h4>
+                <a href="/event/<%=tname[1]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                <a href="<%=tlink[1]%>" class="btn card-btn btn-register"><span>Register</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-4">
+          <div class="card card__main">
+            <div class="card__side card__side--front">
+              <div>
+                <img src="data:image/<%=timage[2].contentType%>;base64, 
+                <%=timage[2].data.toString('base64')%>" class="card__picture">
+              </div>
+
+            </div>
+            <div class="card__side card__side--back">
+              <div class="card-details">
+                <h4>Event Type: &nbsp;<span class="event-type"><%=ttype[2]%></span></h4>
+                <a href="/event/<%=tname[2]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                <a href="<%=tlink[2]%>" class="btn card-btn btn-register"><span>Register</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row event-row" data-aos="fade-up" data-aos-duration="1800">
+        <div class="col-md-6 col-sm-12 col-lg-4">
+          <div class="card card__main">
+            <div class="card__side card__side--front">
+              <div>
+                <img src="data:image/<%=timage[3].contentType%>;base64, 
+                <%=timage[3].data.toString('base64')%>" class="card__picture">
+              </div>
+
+            </div>
+            <div class="card__side card__side--back">
+              <div class="card-details">
+                <h4>Event Type: &nbsp;<span class="event-type"><%=ttype[3]%></span></h4>
+                <a href="/event/<%=tname[3]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                <a href="<%=tlink[3]%>" class="btn card-btn btn-register"><span>Register</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-4">
+          <div class="card card__main">
+            <div class="card__side card__side--front">
+              <div>
+                <img src="data:image/<%=timage[4].contentType%>;base64, 
+                <%=timage[4].data.toString('base64')%>" class="card__picture">
+              </div>
+
+            </div>
+            <div class="card__side card__side--back">
+              <div class="card-details">
+                <h4>Event Type: &nbsp;<span class="event-type"><%=ttype[4]%></span></h4>
+                <a href="/event/<%=tname[4]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                <a href="<%=tlink[4]%>" class="btn card-btn btn-register"><span>Register</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-4">
+          <div class="card card__main">
+            <div class="card__side card__side--front">
+              <div>
+                <img src="data:image/<%=timage[5].contentType%>;base64, 
+                     <%=timage[5].data.toString('base64')%>" class="card__picture">
+              </div>
+            </div>
+            <div class="card__side card__side--back">
+              <div class="card-details">
+                <h4>Event Type: &nbsp;<span class="event-type"><%=ttype[5]%></span></h4>
+                <a href="/event/<%=tname[5]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                <a href="<%=tlink[5]%>" class="btn card-btn btn-register"><span>Register</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     </section>
@@ -256,15 +366,17 @@
         <div class="col-md-6 col-sm-12 col-lg-4">
           <div class="card card__main">
             <div class="card__side card__side--front">
-              <div class="card__picture">
-                
+              <div>
+                <img src="data:image/<%=nimage[0].contentType%>;base64, 
+                <%=nimage[0].data.toString('base64')%>" class="card__picture">
               </div>
+
             </div>
             <div class="card__side card__side--back">
               <div class="card-details">
-                <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
-                <a href="#" class="btn card-btn btn-more"><span>Know more</span></a>
-                <a href="#" class="btn card-btn btn-register"><span>Register</span></a>
+                <h4>Event Type: &nbsp;<span class="event-type"><%=ntype[0]%></span></h4>
+                <a href="/event/<%=nname[0]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                <a href="<%=nlink[0]%>" class="btn card-btn btn-register"><span>Register</span></a>
               </div>
             </div>
           </div>
@@ -272,15 +384,17 @@
         <div class="col-md-6 col-sm-12 col-lg-4">
           <div class="card card__main">
             <div class="card__side card__side--front">
-              <div class="card__picture">
-                
+              <div>
+                <img src="data:image/<%=nimage[1].contentType%>;base64, 
+                <%=nimage[1].data.toString('base64')%>" class="card__picture">
               </div>
+
             </div>
             <div class="card__side card__side--back">
               <div class="card-details">
-                <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
-                <a href="#" class="btn card-btn btn-more"><span>Know more</span></a>
-                <a href="#" class="btn card-btn btn-register"><span>Register</span></a>
+                <h4>Event Type: &nbsp;<span class="event-type"><%=ntype[1]%></span></h4>
+                <a href="/event/<%=nname[1]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                <a href="<%=nlink[1]%>" class="btn card-btn btn-register"><span>Register</span></a>
               </div>
             </div>
           </div>
@@ -288,15 +402,72 @@
         <div class="col-md-6 col-sm-12 col-lg-4">
           <div class="card card__main">
             <div class="card__side card__side--front">
-              <div class="card__picture">
-                
+              <div>
+                <img src="data:image/<%=nimage[2].contentType%>;base64, 
+                <%=nimage[2].data.toString('base64')%>" class="card__picture">
+              </div>
+
+            </div>
+            <div class="card__side card__side--back">
+              <div class="card-details">
+                <h4>Event Type: &nbsp;<span class="event-type"><%=ntype[2]%></span></h4>
+                <a href="/event/<%=nname[2]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                <a href="<%=nlink[2]%>" class="btn card-btn btn-register"><span>Register</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row event-row" data-aos="fade-up" data-aos-duration="1800">
+        <div class="col-md-6 col-sm-12 col-lg-4">
+          <div class="card card__main">
+            <div class="card__side card__side--front">
+              <div>
+                <img src="data:image/<%=nimage[3].contentType%>;base64, 
+                <%=nimage[3].data.toString('base64')%>" class="card__picture">
+              </div>
+
+            </div>
+            <div class="card__side card__side--back">
+              <div class="card-details">
+                <h4>Event Type: &nbsp;<span class="event-type"><%=ntype[3]%></span></h4>
+                <a href="/event/<%=nname[3]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                <a href="<%=nlink[3]%>" class="btn card-btn btn-register"><span>Register</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-4">
+          <div class="card card__main">
+            <div class="card__side card__side--front">
+              <div>
+                <img src="data:image/<%=nimage[4].contentType%>;base64, 
+                <%=nimage[4].data.toString('base64')%>" class="card__picture">
+              </div>
+
+            </div>
+            <div class="card__side card__side--back">
+              <div class="card-details">
+                <h4>Event Type: &nbsp;<span class="event-type"><%=ntype[4]%></span></h4>
+                <a href="/event/<%=nname[4]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                <a href="<%=nlink[4]%>" class="btn card-btn btn-register"><span>Register</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-4">
+          <div class="card card__main">
+            <div class="card__side card__side--front">
+              <div>
+                <img src="data:image/<%=nimage[5].contentType%>;base64, 
+                     <%=nimage[5].data.toString('base64')%>" class="card__picture">
               </div>
             </div>
             <div class="card__side card__side--back">
               <div class="card-details">
-                <h4>Event Type: &nbsp;<span class="event-type">Hackathon</span></h4>
-                <a href="#" class="btn card-btn btn-more"><span>Know more</span></a>
-                <a href="#" class="btn card-btn btn-register"><span>Register</span></a>
+                <h4>Event Type: &nbsp;<span class="event-type"><%=ntype[5]%></span></h4>
+                <a href="/event/<%=nname[5]%>" class="btn card-btn btn-more"><span>Know more</span></a>
+                <a href="<%=nlink[5]%>" class="btn card-btn btn-register"><span>Register</span></a>
               </div>
             </div>
           </div>
