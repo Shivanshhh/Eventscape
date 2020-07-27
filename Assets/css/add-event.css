@@ -70,16 +70,6 @@ input[type=number]::-moz-inner-spin-button {
     font-size: 1.5rem;
 }
 .btn-submit{
-    /* background-color: #FF7070;
-    width: 50%;
-    margin-top: 2%;
-    color: rgba(255, 255, 255, .9) !important;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: inherit;
-    outline: none; */
-
     border: none;
     width: 50%;
     margin-top: 2%;
@@ -316,7 +306,7 @@ top: 1rem;
   height: auto;
 }
 
-#custom-button {
+#custom-btn {
   border: none;
   padding: 1rem 1.5rem;
   color: rgba(255, 255, 255, .8);
@@ -325,11 +315,7 @@ top: 1rem;
   cursor: pointer;
   font-family: 'Nunito', sans-serif !important;
   font-size: 1.5rem;
-}
-
-#custom-button:focus{
-    outline: none;
-    border: none;
+  width: 15.75rem;
 }
 
 
@@ -337,6 +323,7 @@ top: 1rem;
   margin-left: 10px;
   color: rgba(255, 255, 255, .5);
   font-size: 1.3rem;
+  
 }
 
 @media only screen and  (max-width: 62em){
@@ -353,15 +340,4 @@ top: 1rem;
   .form{
     padding: 0 8%;
   }
-}
-
-.custom-button{
-  border: none;
-  padding: 1rem 1.5rem;
-  color: rgba(255, 255, 255, .8);
-  background-color: #FF7070;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Nunito', sans-serif !important;
-  font-size: 1.5rem;
 }
