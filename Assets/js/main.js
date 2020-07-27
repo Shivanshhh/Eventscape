@@ -55,7 +55,6 @@ $("#form-direct--login").on('click', (e) =>{
     e.preventDefault();
     $(".form_login").addClass("hide");
     $(".form_signup").removeClass("hide");
-    
 });
 $("#form-direct--signup").on('click', (e) =>{
     e.preventDefault();
@@ -63,8 +62,20 @@ $("#form-direct--signup").on('click', (e) =>{
     $(".form_login").removeClass("hide");
 });
 
-$('#form input').keydown(function(e) {
-  if (e.keyCode == 13) {
-      $('#form').submit();
-  }
+$("#non-technical-events").on('click', (e)=>{
+  $("#upcoming").addClass("hide");
+  $("#technical").addClass("hide");
+  $("#non-technical").removeClass("hide");
+});
+
+$("#technical-events").on('click', (e)=>{
+  $("#upcoming").addClass("hide");
+  $("#non-technical").addClass("hide");
+  $("#technical").removeClass("hide");
+});
+
+$("#upcoming-events").on('click', (e)=>{
+  $("#non-technical").addClass("hide");
+  $("#technical").addClass("hide");
+  $("#upcoming").removeClass("hide");
 });
