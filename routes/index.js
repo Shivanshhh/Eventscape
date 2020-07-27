@@ -7,6 +7,7 @@ router.get('/home', async (req, res) => {
   var event_pics = [];
   var event_names = [];
   var event_links = [];
+  var event_types = [];
 
   var alldata = await Event.find({});
   alldata.forEach(function (doc) {
@@ -47,6 +48,7 @@ router.get('/home', async (req, res) => {
         event_pics.push(doc.image);
         event_names.push(doc.eventname);
         event_links.push(doc.eventlink)
+        //event_types.push(doc.)
         delete alldata[doc];
         q = 1;
       }
@@ -63,7 +65,7 @@ router.get('/home', async (req, res) => {
 
 router.post('/home', async (req, res) => {
   const { event } = req.body;
-  res.redirect(`/event/${event}`);
+  res.redirect(`/search/${event}`);
 });
 
 
