@@ -10,6 +10,11 @@ fees:{
     type: Number,
     trim: true,
 },
+eventtype:{
+    type: String,
+    required: [true],
+    trim: true,
+},
 eventvenue:{
     type: String,
     required: [true],

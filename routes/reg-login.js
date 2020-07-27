@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const session= require('express-session');
 const User = require('../models/userschema');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
@@ -19,7 +20,7 @@ router.post('/', async (req, res) => {
     });
     user1.password = await bcrypt.hash(user1.password, saltRounds);
     await User.create(user1);
-    res.redirect('/');
+    res.redirect('/register');
 });
 
 router.post('/login', async (req, res) => {
@@ -28,6 +29,7 @@ router.post('/login', async (req, res) => {
     const f = await User.findOne({ email: email1 });
     if (f) {
       if (bcrypt.compareSync(password1, f.password)) {
+        req.session.userId = f.email;
         res.redirect('/home');
       } else {
         res.send( 'wrong-password' );
