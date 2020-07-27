@@ -65,6 +65,4 @@ router.post('/home', async (req,res) => {
  res.redirect(`/event/${event}`);
 });
 
-
-
 module.exports= router;
