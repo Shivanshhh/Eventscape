@@ -28,5 +28,5 @@ router.get("/:event", async (req, res) => {
   </div>`;});
   res.render('search-event.ejs', {html : html});
   });
- 
+
 module.exports = router;

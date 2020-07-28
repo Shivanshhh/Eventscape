@@ -34,10 +34,8 @@ router.get('/home', async (req, res) => {
     return (Date.now() - date) < 0;
   });
 
-  console.log(nextDate);
-  
-
-  console.log(alldata)
+  // console.log(nextDate);
+  // console.log(alldata);
   var i = 0;
   for (i = 0; i < 6; i++) {
     q = 0;
@@ -66,16 +64,15 @@ router.get('/home', async (req, res) => {
   talldata.forEach(async (doc) => {
     tevent_date.push(doc.eventdate);
   });
-  console.log(tevent_date);
+  // console.log(tevent_date);
 
-  console.log(talldata);
+  // console.log(talldata);
   var torderedDates = sortDates(tevent_date);
 
   var tnextDate = torderedDates.filter(function (date) {
     return (Date.now() - date) < 0;
   });
 
-  
 
   var i = 0;
   for (i = 0; i < 6; i++) {
@@ -114,8 +111,6 @@ router.get('/home', async (req, res) => {
     return (Date.now() - date) < 0;
   });
 
-  
-
   var i = 0;
   for (i = 0; i < 6; i++) {
     q = 0;
@@ -140,7 +135,7 @@ router.get('/home', async (req, res) => {
   
   res.render('index.ejs', { image: event_pics, name: event_names, link: event_links, type: event_types,
     timage: tevent_pics, tname: tevent_names, tlink: tevent_links, ttype: tevent_types,
-    nimage: nevent_pics, nname: nevent_names, nlink: nevent_links, ntype: event_types });
+    nimage: nevent_pics, nname: nevent_names, nlink: nevent_links, ntype: nevent_types });
 
 });
 

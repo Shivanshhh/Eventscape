@@ -10,7 +10,6 @@ router.get('/', (req, res) =>
     res.render('login');
 });
 
-
 router.post('/', async (req, res) => {
     const user1 = new User({
           username: req.body.username,
