@@ -16,9 +16,11 @@ router.get('/home', async (req, res) => {
      await Ev.Event.findByIdAndDelete(doc._id);
      }
      else{
-    event_date.push(doc.eventdate);}
+     event_date.push(doc.eventdate);}
+     console.log(doc);
+     console.log(event_date);
   });
-  console.log(event_date);
+ // console.log(event_date);
 
   function sortDates(dates) {
     return dates.map(function (date) {
@@ -27,33 +29,35 @@ router.get('/home', async (req, res) => {
       return a - b;
     })
   };
-  console.log(alldata);
+  console.log(event_date);
   var orderedDates = sortDates(event_date);
   console.log(orderedDates);
   var nextDate = orderedDates.filter(function (date) {
     return (Date.now() - date) < 0;
   });
 
-  // console.log(nextDate);
-  // console.log(alldata);
+  //console.log(nextDate);
+  
+
+  //console.log(alldata)
   var i = 0;
   for (i = 0; i < 6; i++) {
-    q = 0;
+    var q = 0;
     alldata.forEach(function (doc) {
       console.log(doc)
-      const d = new Date(doc.eventdate).getTime();
-      console.log('doc' + d)
-      console.log('date' + nextDate[i])
-      if (d == nextDate[i] && q != 1) {
+      const e = new Date(doc.eventdate).getTime();
+    //  console.log('doc' + e)
+      //console.log('date' + nextDate[i])
+      if (e == nextDate[i] && q != 1) {
         event_pics.push(doc.image);
         event_names.push(doc.eventname);
         event_links.push(doc.eventlink);
         event_types.push(doc.eventtype);
-        delete alldata[doc];
+        delete alldata[alldata.indexOf(doc)];
         q = 1;
       }
     })
-  };
+  } ;
   var tevent_date = [];
   var tevent_pics = [];
   var tevent_names = [];
@@ -64,9 +68,9 @@ router.get('/home', async (req, res) => {
   talldata.forEach(async (doc) => {
     tevent_date.push(doc.eventdate);
   });
-  // console.log(tevent_date);
+  //console.log(tevent_date);
 
-  // console.log(talldata);
+  //console.log(talldata);
   var torderedDates = sortDates(tevent_date);
 
   var tnextDate = torderedDates.filter(function (date) {
@@ -78,16 +82,16 @@ router.get('/home', async (req, res) => {
   for (i = 0; i < 6; i++) {
     q = 0;
     talldata.forEach(function (doc) {
-      console.log(doc)
-      const d = new Date(doc.eventdate).getTime();
-      console.log('doc' + d)
-      console.log('date' + tnextDate[i])
+   //   console.log(doc)
+      var d = new Date(doc.eventdate).getTime();
+   //   console.log('doc' + d)
+   //   console.log('date' + tnextDate[i])
       if (d == tnextDate[i] && q != 1) {
         tevent_pics.push(doc.image);
         tevent_names.push(doc.eventname);
         tevent_links.push(doc.eventlink);
         tevent_types.push(doc.eventtype);
-        delete talldata[doc];
+        delete talldata[talldata.indexOf(doc)];
         q = 1;
       }
     })
@@ -102,9 +106,9 @@ router.get('/home', async (req, res) => {
   nalldata.forEach(async (doc) => {
     nevent_date.push(doc.eventdate);
   });
-  console.log(nevent_date);
+ // console.log(nevent_date);
 
-  console.log(nalldata);
+  //console.log(nalldata);
   var norderedDates = sortDates(nevent_date);
 
   var nnextDate = norderedDates.filter(function (date) {
@@ -115,16 +119,16 @@ router.get('/home', async (req, res) => {
   for (i = 0; i < 6; i++) {
     q = 0;
     nalldata.forEach(function (doc) {
-      console.log(doc)
-      const d = new Date(doc.eventdate).getTime();
-      console.log('doc' + d)
-      console.log('date' + nnextDate[i])
-      if (d == nnextDate[i] && q != 1) {
+    //  console.log(doc)
+      const f = new Date(doc.eventdate).getTime();
+    //  console.log('doc' + f)
+      //console.log('date' + nnextDate[i])
+      if (f == nnextDate[i] && q != 1) {
         nevent_pics.push(doc.image);
         nevent_names.push(doc.eventname);
         nevent_links.push(doc.eventlink);
         nevent_types.push(doc.eventtype);
-        delete nalldata[doc];
+        delete nalldata[nalldata.indexOf(doc)];
         q = 1;
       }
     })
