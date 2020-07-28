@@ -22,7 +22,7 @@ var storage = multer.diskStorage({
     cb(null, file.fieldname + '-' + Date.now())  
   } 
 }); 
-  
+
 var upload = multer({ storage: storage }); 
 
 router.get('/', redirectLogin, (req, res) => {
@@ -61,7 +61,6 @@ router.post('/', upload.single('image'), async (req,res) =>{
         },
         eventdescription:req.body.eventdescription,
         });
-  
 
 await Ev.Event.create(event);
 await Ev.Event1.create(event1);

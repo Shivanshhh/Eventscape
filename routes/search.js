@@ -26,6 +26,7 @@ router.get("/:event", async (req, res) => {
       </div>
     </div>
   </div>`;});
+
   res.render('search-event.ejs', {html : html});
   });
 
