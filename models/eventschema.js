@@ -26,11 +26,6 @@ eventdate:{
     required: [true],
     trim: true,
 },
-eventtech:{
-    type: String,
-    required: [true],
-    trim: true,
-},
 eventtime:{
     type: String,
     required: [true],
@@ -46,6 +41,11 @@ image:
     data: Buffer, 
     contentType: String, 
 
+},
+eventtech:{
+    type: String,
+    required: [true],
+    trim: true,
 },
 eventdescription: {
     type: String,

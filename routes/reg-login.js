@@ -29,7 +29,7 @@ router.post('/login', async (req, res) => {
     if (f) {
       if (bcrypt.compareSync(password1, f.password)) {
         req.session.userId = f.email;
-        res.redirect('/home');
+        res.redirect('/addevent');
       } else {
         res.send( 'wrong-password' );
       }

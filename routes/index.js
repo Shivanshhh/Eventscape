@@ -2,6 +2,10 @@ const express = require('express');
 const Ev = require('../models/eventschema');
 const router = express.Router();
 
+router.get('/',(req, res)=>{
+  res.redirect('/home')
+})
+
 router.get('/home', async (req, res) => {
   var event_date = [];
   var event_pics = [];

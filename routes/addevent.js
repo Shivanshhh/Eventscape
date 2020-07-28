@@ -36,7 +36,6 @@ router.post('/', upload.single('image'), async (req,res) =>{
       fees: req.body.fees,
       eventtype: req.body.type,
       eventvenue: req.body.eventvenue,
-      eventtech: req.body.technical,
       eventdate: req.body.eventdate,
       eventtime: req.body.eventtime,
       eventlink: req.body.eventlink,
@@ -44,6 +43,7 @@ router.post('/', upload.single('image'), async (req,res) =>{
           data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)), 
           contentType: 'image/png',
       },
+      eventtech: req.body.technical,
       eventdescription:req.body.eventdescription,
       });
       const event1= new Ev.Event1({
@@ -51,7 +51,6 @@ router.post('/', upload.single('image'), async (req,res) =>{
         fees: req.body.fees,
         eventtype: req.body.type,
         eventvenue: req.body.eventvenue,
-        eventtech: req.body.technical,
         eventdate: req.body.eventdate,
         eventtime: req.body.eventtime,
         eventlink: req.body.eventlink,
@@ -59,6 +58,7 @@ router.post('/', upload.single('image'), async (req,res) =>{
             data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)), 
             contentType: 'image/png',
         },
+        eventtech: req.body.technical,
         eventdescription:req.body.eventdescription,
         });
 
