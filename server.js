@@ -30,6 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use('/Assets', express.static(__dirname + '/Assets'));
+
 app.use(express.static(__dirname + '/routes/uploads'));
 
 app.listen(process.env.PORT || 3000, () => {
