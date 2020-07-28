@@ -2,7 +2,7 @@ const express = require('express');
 const Ev = require('../models/eventschema');
 const router = express.Router();
 
-router.get('/home', async (req, res) => {
+router.get('/', async (req, res) => {
   var event_date = [];
   var event_pics = [];
   var event_names = [];
